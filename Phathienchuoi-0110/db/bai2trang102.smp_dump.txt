@@ -1,0 +1,8 @@
+
+State Machine - |bai2trang102|cs
+Name cs.s011 cs.s01 cs.s0 cs.start cs.s0110 
+cs.start 0 0 0 0 0 
+cs.s0 0 0 1 1 0 
+cs.s01 0 1 0 1 0 
+cs.s011 1 0 0 1 0 
+cs.s0110 0 0 0 1 1 

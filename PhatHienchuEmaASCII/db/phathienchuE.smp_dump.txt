@@ -1,0 +1,12 @@
+
+State Machine - |phathienchuE|cs
+Name cs.s0100010 cs.s010001 cs.s01000 cs.s0100 cs.s010 cs.s01 cs.s0 cs.start cs.s01000101 
+cs.start 0 0 0 0 0 0 0 0 0 
+cs.s0 0 0 0 0 0 0 1 1 0 
+cs.s01 0 0 0 0 0 1 0 1 0 
+cs.s010 0 0 0 0 1 0 0 1 0 
+cs.s0100 0 0 0 1 0 0 0 1 0 
+cs.s01000 0 0 1 0 0 0 0 1 0 
+cs.s010001 0 1 0 0 0 0 0 1 0 
+cs.s0100010 1 0 0 0 0 0 0 1 0 
+cs.s01000101 0 0 0 0 0 0 0 1 1 

@@ -1,0 +1,24 @@
+module counter_bcd (ck,rs,bcd1,bcd2);
+input ck, rs;
+output [3:0] bcd1,bcd2;
+reg [3:0] bcd1, bcd2;
+always @ (posedge ck)
+	begin
+		if (rs == 1)
+			begin 
+				bcd1 <= 4'b0000;
+				bcd2 <= 4'b0000;
+			end
+			else
+				begin bcd1 <= bcd1 + 1;
+					if (bcd1 == 4'b1001)
+						begin
+							bcd1 <= 4'b0000;
+							bcd2 <= bcd2 + 1;
+							if (bcd2 == 4'b1001)
+							bcd2 <= 4'b0000;
+						end
+				end
+			end
+endmodule 
+ 

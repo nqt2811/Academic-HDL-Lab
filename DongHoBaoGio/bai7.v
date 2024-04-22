@@ -1,0 +1,123 @@
+module bai7(CLOCK_50,SW,HEX1,HEX0,HEX2,HEX3,HEX4,HEX5,LEDR);
+input CLOCK_50;
+input [16:0] SW; // [15:7]gio [7:0]Phut
+input [0:0] LEDR;
+output  [6:0] HEX1,HEX0,HEX2,HEX3,HEX4,HEX5;
+wire [3:0] chg, dvg, chp, dvp, chgio, dvgio;
+reg [3:0] bcd1, bcd2, bcd3, bcd4, bcd5, bcd6;
+//bcd1 giay
+//bcd2 chuc giay
+//bcd3 phut
+//bcd4 chuc phut
+//bcd5 gio
+//bcd6 chuc gio
+integer q;
+reg clock_1s = 1'b0;
+
+assign chg = bcd2; //chuyen kieu reg sang kieu wire
+assign dvg = bcd1;
+assign chp = bcd4; //chuyen kieu reg sang kieu wire
+assign dvp = bcd3;
+assign chgio = bcd6; //chuyen kieu reg sang kieu wire
+assign dvgio = bcd5;
+bcd7seg(dvg,HEX0);
+bcd7seg(chg,HEX1);
+bcd7seg(dvp,HEX2);
+bcd7seg(chp,HEX3);
+bcd7seg(dvgio,HEX4);
+bcd7seg(chgio,HEX5);
+
+//tao xung clock cho dvg
+always @ (posedge CLOCK_50)
+begin
+		q = q+1;
+		if (q == 1000000) //50000000 (1s)
+		begin 
+			clock_1s = ~clock_1s;
+			q = 0;
+		end
+end
+
+// dong ho chay
+always @ (posedge clock_1s)
+begin
+	
+	if (SW == 1 )
+	begin
+			bcd1 <= 4'b0000;
+			bcd2 <= 4'b0000;
+			bcd3 <= 4'b0000;
+			bcd4 <= 4'b0000;
+			bcd5 <= 4'b0000;
+			bcd6 <= 4'b0000;
+	end
+	else
+	begin
+			bcd1 <= bcd1 + 1;
+			if (bcd1 == 4'b1001)
+			begin
+				bcd1 <= 4'b0000;
+				bcd2 <= bcd2 + 1;
+				if (bcd2 == 4'b0101) 
+				begin
+					bcd2 <= 4'b0000;
+					bcd3 <= bcd3 + 1;
+					if (bcd3 == 4'b1001)
+					begin
+						bcd3 <= 4'b0000;
+						bcd4 <= bcd4 + 1;
+						if (bcd4 == 4'b0101)
+						begin
+							bcd4 <= 4'b0000;
+							bcd5 <= bcd5 + 1;
+							if (bcd5 == 4'b1001)
+							begin
+								bcd5 <= 4'b0000;
+								bcd6 <= bcd6 + 1;
+							end
+							if (bcd6 == 4'b0010 && bcd5 == 4'b0011)
+							begin
+							bcd1 <=4'b0000;
+							bcd2 <=4'b0000;
+							bcd3 <=4'b0000;
+							bcd4 <=4'b0000;
+							bcd5 <=4'b0000;
+							bcd6 <=4'b0000;
+							end
+						end
+					end
+				end				
+			end
+	end
+end
+
+// cai gio
+always @ (posedge clock_1s)
+begin 
+	if ((SW[3:0] = bcd3) && (SW[7:4] = bcd4) && (SW[11:8] = bcd5) && (SW[15:12] = bcd6))
+	LEDR[0] = 1'b0;
+end
+endmodule
+
+// mach giai ma led bay doan
+module bcd7seg(bcd,display);
+input [3:0]bcd;
+output [6:0]display;
+reg [6:0]display;
+always@(bcd) begin
+case(bcd)
+4'b0000: display = 7'b1000000;
+4'b0001: display = 7'b1111001;
+4'b0010: display = 7'b0100100;
+4'b0011: display = 7'b0110000;
+4'b0100: display = 7'b0011001;
+4'b0101: display = 7'b0010010;
+4'b0110: display = 7'b0000010;
+4'b0111: display = 7'b1111000;
+4'b1000: display = 7'b0000000;
+4'b1001: display = 7'b0010000;
+default display = 7'b1111111;
+endcase
+end
+endmodule
+

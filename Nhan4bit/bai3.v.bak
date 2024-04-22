@@ -1,0 +1,93 @@
+//mach nhan
+// Tinh P = (A x B) + (C x D)
+module bai4 (SW, HEX7, HEX6, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0);
+input [15:0] SW;
+output [0:6] HEX7, HEX6, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0;
+wire P, A, B, C, D;
+wire P1, P2;
+
+
+machcong C1(P1, P2, P);
+machnhan N1(A, B, P1); 
+machnhan N1(C, D, P1);
+
+// MACH NHAN
+module   machnhan (in1, in2, out);  
+input [3:0] in1, {7:4} int2;  
+output [0:6] out; 
+ 
+wire [3:0] a, b;  
+wire [7:0] p;  
+wire [3:1] c_b1;    
+wire [5:2] pp1;   
+wire [3:1] c_b2;   
+wire [6:3] pp2;    
+wire [3:1] c_b3;  
+ 
+assign a = in1[3:0]; 
+assign b = in2[7:4];  
+assign p[0] = a[0] & b[0]; 
+ 
+// module fa (a, b, ci, s, co);  
+fa b1_a0 (a[1] & b[0], a[0] & b[1], 1'b0, p[1], c_b1[1]);  
+fa b1_a1 (a[2] & b[0], a[1] & b[1], c_b1[1], pp1[2], c_b1[2]);  
+fa b1_a2 (a[3] & b[0], a[2] & b[1], c_b1[2], pp1[3], c_b1[3]);  
+fa b1_a3 (1'b0,  a[3] & b[1], c_b1[3], pp1[4], pp1[5]); 
+ 
+// module fa (a, b, ci, s, co);  
+fa b2_a0 (pp1[2], a[0] & b[2], 1'b0, p[2], c_b2[1]);  
+fa b2_a1 (pp1[3], a[1] & b[2], c_b2[1], pp2[3], c_b2[2]);  
+fa b2_a2 (pp1[4], a[2] & b[2], c_b2[2], pp2[4], c_b2[3]);  
+fa b2_a3 (pp1[5], a[3] & b[2], c_b2[3], pp2[5], pp2[6]); 
+ 
+// module fa (a, b, ci, s, co);  
+fa b3_a0 (pp2[3], a[0] & b[3], 1'b0, P[3], c_b3[1]);  
+fa b3_a1 (pp2[4], a[1] & b[3], c_b3[1], p[4], c_b3[2]);  
+fa b3_a2 (pp2[5], a[2] & b[3], c_b3[2], p[5], c_b3[3]);  
+fa b3_a3 (pp2[6], a[3] & b[3], c_b3[3], p[6], p[7]); 
+ 
+hex7seg digit_7 (4'h0, HEX7);  
+hex7seg digit_6 (A, HEX6); 
+hex7seg digit_5 (4'h0, HEX5);  
+hex7seg digit_4 (B, HEX4); 
+hex7seg digit_3 (4'h0, HEX3);  
+hex7seg digit_2 (4'h0, HEX2);  
+hex7seg digit_1 (P[7:4], HEX1);  
+hex7seg digit_0 (P[3:0], HEX0);   
+endmodule     
+
+module fa (a1, b1, ci1, s1, co1);  
+input a1, b1, ci1;  
+output s1, co1; 
+wire a_xor_b; 
+ 
+assign a_xor_b = a1 ^ b1;  
+assign s1 = a_xor_b ^ ci1;  
+assign co1 = (~a_xor_b & b1) | (a_xor_b & ci1); 
+endmodule 
+ 
+module hex7seg (hex, display);  
+input [3:0] hex;  
+output [0:6] display;  
+reg [0:6] display; 
+ 
+always @ (hex)   
+case (hex)    
+4'h0: display = 7'b0000001;    
+4'h1: display = 7'b1001111;    
+4'h2: display = 7'b0010010;    
+4'h3: display = 7'b0000110;    
+4'h4: display = 7'b1001100;    
+4'h5: display = 7'b0100100;    
+4'h6: display = 7'b1100000;    
+4'h7: display = 7'b0001111;    
+4'h8: display = 7'b0000000;    
+4'h9: display = 7'b0001100;    
+4'hA: display = 7'b0001000;    
+4'hb: display = 7'b1100000;    
+4'hC: display = 7'b0110001;    
+4'hd: display = 7'b1000010;    
+4'hE: display = 7'b0110000;    
+4'hF: display = 7'b0111000;   
+endcase 
+endmodule  

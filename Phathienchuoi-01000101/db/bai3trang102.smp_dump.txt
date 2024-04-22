@@ -1,0 +1,10 @@
+
+State Machine - |bai3trang102|cs
+Name cs.s110 cs.s11 cs.s1 cs.s001 cs.s00 cs.s0 cs.start 
+cs.start 0 0 0 0 0 0 0 
+cs.s0 0 0 0 0 0 1 1 
+cs.s00 0 0 0 0 1 0 1 
+cs.s001 0 0 0 1 0 0 1 
+cs.s1 0 0 1 0 0 0 1 
+cs.s11 0 1 0 0 0 0 1 
+cs.s110 1 0 0 0 0 0 1 

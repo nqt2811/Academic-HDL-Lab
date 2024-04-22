@@ -1,0 +1,59 @@
+module bai3trang102 (SW,KEY,LEDG);
+input [1:0]SW;
+input [3:3]KEY;
+parameter start = 3'b000;
+parameter s0 = 3'b001;
+parameter s00 = 3'b010;
+parameter s001 = 3'b011;
+parameter s1 = 3'b100;
+parameter s11 = 3'b101;
+parameter s110 = 3'b110;
+
+reg[2:0]cs,ns;
+always@(*)
+begin
+	case(cs)
+	start: if(SW[0])ns = s1;
+	else ns = s0;
+	s0: if(SW[0])ns = s1;
+	else ns = s00;
+	s00: if(SW[0])ns = s001;
+	else ns = cs;
+	s001: if(SW[0])ns = s11;
+	else ns = s0;
+	s1: if(SW[0])ns = s11;
+	else ns = s0;
+	s11: if(SW[0])ns = cs;
+	else ns = s110;
+	s110: if(SW[0])ns = s1;
+	else ns = s00;
+	default ns = start;
+	endcase
+end
+
+always @(negedge KEY[3])
+begin
+	if(SW[1]) cs <= start;
+	else cs <= ns;
+end
+
+always @(*)
+begin
+if(cs == s001)
+begin
+LEDG[0]<= 1'b1;
+LEDG[1]<= 1'b0;
+end
+else if (cs == s110)
+begin
+LEDG[1]<= 1'b1;
+LEDG[0]<= 1'b0;
+end
+
+else
+begin
+LEDG[0] <= 1'b0;
+LEDG[1] <= 1'b0
+end
+end
+endmodule

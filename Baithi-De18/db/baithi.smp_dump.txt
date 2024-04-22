@@ -1,0 +1,10 @@
+
+State Machine - |baithi|cs
+Name cs.s101011 cs.s10101 cs.s1010 cs.s101 cs.s10 cs.s1 cs.start 
+cs.start 0 0 0 0 0 0 0 
+cs.s1 0 0 0 0 0 1 1 
+cs.s10 0 0 0 0 1 0 1 
+cs.s101 0 0 0 1 0 0 1 
+cs.s1010 0 0 1 0 0 0 1 
+cs.s10101 0 1 0 0 0 0 1 
+cs.s101011 1 0 0 0 0 0 1 

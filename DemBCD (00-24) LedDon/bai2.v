@@ -1,0 +1,32 @@
+//dem BCD 00_24
+module bai2 (KEY,SW,LEDR);
+input [12:12]SW;  //rs	
+input [3:3]KEY;  //ck
+output [7:0]LEDR; 
+reg [8:1]LEDR;
+always @ (posedge KEY[3])
+	begin
+		if (SW[12] == 1)
+			begin 
+				LEDR[8:5] <= 4'b0000; //CH
+				LEDR[4:1] <= 4'b0000; //DV
+			end
+		else
+			begin
+				LEDR[4:1] <= LEDR[4:1] + 1;
+				if (LEDR[4:1] == 4'b1001)
+					begin
+						LEDR[4:1] <= 4'b0000;
+						LEDR[8:5] <= LEDR[8:5] + 1;
+					end
+					
+					//ngat24
+					if ((LEDR[8:5] == 4'b0010) && (LEDR[4:1] == 4'b0100))
+						begin
+							LEDR[8:5] <= 4'b0000;
+							LEDR[4:1] <= 4'b0000;
+						end
+					end
+				end
+endmodule 
+ 

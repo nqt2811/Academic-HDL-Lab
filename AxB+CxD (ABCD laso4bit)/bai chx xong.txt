@@ -1,0 +1,13 @@
+// Tinh P = (A x B) + (C x D)
+module bai4 (SW, HEX7, HEX6, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0);
+input [15:0] SW;
+output [0:6] HEX7, HEX6, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0;
+wire P, A, B, C, D;
+wire P1, P2;
+
+assign 
+machcong C1(P1, P2, P);
+machnhan N1(A, B, P1); 
+machnhan N1(C, D, P1);
+
+// mach nhan

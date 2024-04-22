@@ -1,0 +1,5 @@
+module mux2to1 (SW, LEDR);
+	input [1:0]SW;
+	output reg [0:0]LEDR;
+	assign	LEDR[0] = (~SW[2]&SW[0])|(SW[2]&SW[1]);
+	endmodule

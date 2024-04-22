@@ -1,0 +1,7 @@
+|bai3trang102
+SW[0] => ~NO_FANOUT~
+SW[1] => ~NO_FANOUT~
+KEY[3] => ~NO_FANOUT~
+LEDG[0] <= <GND>
+
+

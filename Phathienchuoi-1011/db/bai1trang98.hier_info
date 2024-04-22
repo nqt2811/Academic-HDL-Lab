@@ -1,0 +1,11 @@
+|bai1trang98
+SW[0] => cs~1.DATAIN
+SW[1] => cs~3.DATAIN
+SW[2] => ns.s101.DATAB
+SW[2] => ns.s1011.DATAB
+SW[2] => Selector1.IN2
+SW[2] => Selector0.IN1
+SW[2] => Selector2.IN1
+LEDR[0] <= LEDR[0].DB_MAX_OUTPUT_PORT_TYPE
+
+

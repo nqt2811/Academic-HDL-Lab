@@ -1,0 +1,27 @@
+module bai2 (SW,LEDR);
+input [2:0]SW;
+output [3:0]LEDR;
+wire a1,a2,a3;
+
+t_ff T1
+t_ff T2
+t_ff T3
+t_ff T4
+
+
+
+module t_ff (q, ck, t, rs);
+input ck, t, rs;
+output q;
+reg q;
+always @ (posedge ck or negedge rs)
+begin
+	if (rs == 1'b0)
+		q <= 0;
+	else
+		if (t == 1'b0)
+			q <= q; 
+		else
+			q <= !q;
+end
+endmodule 

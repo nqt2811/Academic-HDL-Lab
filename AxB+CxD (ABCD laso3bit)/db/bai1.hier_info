@@ -1,0 +1,874 @@
+|bai1
+SW[0] => a[0].IN1
+SW[1] => a[1].IN1
+SW[2] => a[2].IN1
+SW[3] => a[3].IN1
+SW[4] => b[0].IN1
+SW[5] => b[1].IN1
+SW[6] => b[2].IN1
+SW[7] => b[3].IN1
+SW[8] => c[0].IN1
+SW[9] => c[1].IN1
+SW[10] => c[2].IN1
+SW[11] => c[3].IN1
+SW[12] => d[0].IN1
+SW[13] => d[1].IN1
+SW[14] => d[2].IN1
+SW[15] => d[3].IN1
+LEDR[0] <= s[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= s[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= s[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] <= s[3].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[4] <= s[4].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[5] <= s[5].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[6] <= s[6].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[7] <= s[7].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[8] <= s[8].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[9] <= s[9].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[10] <= s[10].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[11] <= s[11].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[12] <= FA8:comb_37.port3
+LEDR[13] <= FA8:comb_37.port3
+LEDR[14] <= FA8:comb_37.port3
+LEDR[15] <= FA8:comb_37.port3
+HEX0[6] <= hex7seg:digit_0.port1
+HEX0[5] <= hex7seg:digit_0.port1
+HEX0[4] <= hex7seg:digit_0.port1
+HEX0[3] <= hex7seg:digit_0.port1
+HEX0[2] <= hex7seg:digit_0.port1
+HEX0[1] <= hex7seg:digit_0.port1
+HEX0[0] <= hex7seg:digit_0.port1
+HEX1[6] <= hex7seg:digit_1.port1
+HEX1[5] <= hex7seg:digit_1.port1
+HEX1[4] <= hex7seg:digit_1.port1
+HEX1[3] <= hex7seg:digit_1.port1
+HEX1[2] <= hex7seg:digit_1.port1
+HEX1[1] <= hex7seg:digit_1.port1
+HEX1[0] <= hex7seg:digit_1.port1
+HEX2[6] <= hex7seg:digit_2.port1
+HEX2[5] <= hex7seg:digit_2.port1
+HEX2[4] <= hex7seg:digit_2.port1
+HEX2[3] <= hex7seg:digit_2.port1
+HEX2[2] <= hex7seg:digit_2.port1
+HEX2[1] <= hex7seg:digit_2.port1
+HEX2[0] <= hex7seg:digit_2.port1
+HEX3[6] <= hex7seg:digit_3.port1
+HEX3[5] <= hex7seg:digit_3.port1
+HEX3[4] <= hex7seg:digit_3.port1
+HEX3[3] <= hex7seg:digit_3.port1
+HEX3[2] <= hex7seg:digit_3.port1
+HEX3[1] <= hex7seg:digit_3.port1
+HEX3[0] <= hex7seg:digit_3.port1
+
+
+|bai1|multiplier:comb_35
+p[0] <= Node1:node0.port1
+p[1] <= Node1:node4.port1
+p[2] <= Node1:node8.port1
+p[3] <= Node1:node12.port1
+p[4] <= Node1:node13.port1
+p[5] <= Node1:node14.port1
+p[6] <= Node1:node15.port1
+p[7] <= Node1:node15.port0
+a[0] => a[0].IN4
+a[1] => a[1].IN4
+a[2] => a[2].IN4
+a[3] => a[3].IN4
+b[0] => b[0].IN4
+b[1] => b[1].IN4
+b[2] => b[2].IN4
+b[3] => b[3].IN4
+
+
+|bai1|multiplier:comb_35|Node1:node0
+HCout <= FA1:fa1.port0
+VCout <= FA1:fa1.port1
+A => W1.IN0
+B => W1.IN1
+HCin => HCin.IN1
+VCin => VCin.IN1
+
+
+|bai1|multiplier:comb_35|Node1:node0|FA1:fa1
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|multiplier:comb_35|Node1:node1
+HCout <= FA1:fa1.port0
+VCout <= FA1:fa1.port1
+A => W1.IN0
+B => W1.IN1
+HCin => HCin.IN1
+VCin => VCin.IN1
+
+
+|bai1|multiplier:comb_35|Node1:node1|FA1:fa1
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|multiplier:comb_35|Node1:node2
+HCout <= FA1:fa1.port0
+VCout <= FA1:fa1.port1
+A => W1.IN0
+B => W1.IN1
+HCin => HCin.IN1
+VCin => VCin.IN1
+
+
+|bai1|multiplier:comb_35|Node1:node2|FA1:fa1
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|multiplier:comb_35|Node1:node3
+HCout <= FA1:fa1.port0
+VCout <= FA1:fa1.port1
+A => W1.IN0
+B => W1.IN1
+HCin => HCin.IN1
+VCin => VCin.IN1
+
+
+|bai1|multiplier:comb_35|Node1:node3|FA1:fa1
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|multiplier:comb_35|Node1:node4
+HCout <= FA1:fa1.port0
+VCout <= FA1:fa1.port1
+A => W1.IN0
+B => W1.IN1
+HCin => HCin.IN1
+VCin => VCin.IN1
+
+
+|bai1|multiplier:comb_35|Node1:node4|FA1:fa1
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|multiplier:comb_35|Node1:node5
+HCout <= FA1:fa1.port0
+VCout <= FA1:fa1.port1
+A => W1.IN0
+B => W1.IN1
+HCin => HCin.IN1
+VCin => VCin.IN1
+
+
+|bai1|multiplier:comb_35|Node1:node5|FA1:fa1
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|multiplier:comb_35|Node1:node6
+HCout <= FA1:fa1.port0
+VCout <= FA1:fa1.port1
+A => W1.IN0
+B => W1.IN1
+HCin => HCin.IN1
+VCin => VCin.IN1
+
+
+|bai1|multiplier:comb_35|Node1:node6|FA1:fa1
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|multiplier:comb_35|Node1:node7
+HCout <= FA1:fa1.port0
+VCout <= FA1:fa1.port1
+A => W1.IN0
+B => W1.IN1
+HCin => HCin.IN1
+VCin => VCin.IN1
+
+
+|bai1|multiplier:comb_35|Node1:node7|FA1:fa1
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|multiplier:comb_35|Node1:node8
+HCout <= FA1:fa1.port0
+VCout <= FA1:fa1.port1
+A => W1.IN0
+B => W1.IN1
+HCin => HCin.IN1
+VCin => VCin.IN1
+
+
+|bai1|multiplier:comb_35|Node1:node8|FA1:fa1
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|multiplier:comb_35|Node1:node9
+HCout <= FA1:fa1.port0
+VCout <= FA1:fa1.port1
+A => W1.IN0
+B => W1.IN1
+HCin => HCin.IN1
+VCin => VCin.IN1
+
+
+|bai1|multiplier:comb_35|Node1:node9|FA1:fa1
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|multiplier:comb_35|Node1:node10
+HCout <= FA1:fa1.port0
+VCout <= FA1:fa1.port1
+A => W1.IN0
+B => W1.IN1
+HCin => HCin.IN1
+VCin => VCin.IN1
+
+
+|bai1|multiplier:comb_35|Node1:node10|FA1:fa1
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|multiplier:comb_35|Node1:node11
+HCout <= FA1:fa1.port0
+VCout <= FA1:fa1.port1
+A => W1.IN0
+B => W1.IN1
+HCin => HCin.IN1
+VCin => VCin.IN1
+
+
+|bai1|multiplier:comb_35|Node1:node11|FA1:fa1
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|multiplier:comb_35|Node1:node12
+HCout <= FA1:fa1.port0
+VCout <= FA1:fa1.port1
+A => W1.IN0
+B => W1.IN1
+HCin => HCin.IN1
+VCin => VCin.IN1
+
+
+|bai1|multiplier:comb_35|Node1:node12|FA1:fa1
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|multiplier:comb_35|Node1:node13
+HCout <= FA1:fa1.port0
+VCout <= FA1:fa1.port1
+A => W1.IN0
+B => W1.IN1
+HCin => HCin.IN1
+VCin => VCin.IN1
+
+
+|bai1|multiplier:comb_35|Node1:node13|FA1:fa1
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|multiplier:comb_35|Node1:node14
+HCout <= FA1:fa1.port0
+VCout <= FA1:fa1.port1
+A => W1.IN0
+B => W1.IN1
+HCin => HCin.IN1
+VCin => VCin.IN1
+
+
+|bai1|multiplier:comb_35|Node1:node14|FA1:fa1
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|multiplier:comb_35|Node1:node15
+HCout <= FA1:fa1.port0
+VCout <= FA1:fa1.port1
+A => W1.IN0
+B => W1.IN1
+HCin => HCin.IN1
+VCin => VCin.IN1
+
+
+|bai1|multiplier:comb_35|Node1:node15|FA1:fa1
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|multiplier:comb_36
+p[0] <= Node1:node0.port1
+p[1] <= Node1:node4.port1
+p[2] <= Node1:node8.port1
+p[3] <= Node1:node12.port1
+p[4] <= Node1:node13.port1
+p[5] <= Node1:node14.port1
+p[6] <= Node1:node15.port1
+p[7] <= Node1:node15.port0
+a[0] => a[0].IN4
+a[1] => a[1].IN4
+a[2] => a[2].IN4
+a[3] => a[3].IN4
+b[0] => b[0].IN4
+b[1] => b[1].IN4
+b[2] => b[2].IN4
+b[3] => b[3].IN4
+
+
+|bai1|multiplier:comb_36|Node1:node0
+HCout <= FA1:fa1.port0
+VCout <= FA1:fa1.port1
+A => W1.IN0
+B => W1.IN1
+HCin => HCin.IN1
+VCin => VCin.IN1
+
+
+|bai1|multiplier:comb_36|Node1:node0|FA1:fa1
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|multiplier:comb_36|Node1:node1
+HCout <= FA1:fa1.port0
+VCout <= FA1:fa1.port1
+A => W1.IN0
+B => W1.IN1
+HCin => HCin.IN1
+VCin => VCin.IN1
+
+
+|bai1|multiplier:comb_36|Node1:node1|FA1:fa1
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|multiplier:comb_36|Node1:node2
+HCout <= FA1:fa1.port0
+VCout <= FA1:fa1.port1
+A => W1.IN0
+B => W1.IN1
+HCin => HCin.IN1
+VCin => VCin.IN1
+
+
+|bai1|multiplier:comb_36|Node1:node2|FA1:fa1
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|multiplier:comb_36|Node1:node3
+HCout <= FA1:fa1.port0
+VCout <= FA1:fa1.port1
+A => W1.IN0
+B => W1.IN1
+HCin => HCin.IN1
+VCin => VCin.IN1
+
+
+|bai1|multiplier:comb_36|Node1:node3|FA1:fa1
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|multiplier:comb_36|Node1:node4
+HCout <= FA1:fa1.port0
+VCout <= FA1:fa1.port1
+A => W1.IN0
+B => W1.IN1
+HCin => HCin.IN1
+VCin => VCin.IN1
+
+
+|bai1|multiplier:comb_36|Node1:node4|FA1:fa1
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|multiplier:comb_36|Node1:node5
+HCout <= FA1:fa1.port0
+VCout <= FA1:fa1.port1
+A => W1.IN0
+B => W1.IN1
+HCin => HCin.IN1
+VCin => VCin.IN1
+
+
+|bai1|multiplier:comb_36|Node1:node5|FA1:fa1
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|multiplier:comb_36|Node1:node6
+HCout <= FA1:fa1.port0
+VCout <= FA1:fa1.port1
+A => W1.IN0
+B => W1.IN1
+HCin => HCin.IN1
+VCin => VCin.IN1
+
+
+|bai1|multiplier:comb_36|Node1:node6|FA1:fa1
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|multiplier:comb_36|Node1:node7
+HCout <= FA1:fa1.port0
+VCout <= FA1:fa1.port1
+A => W1.IN0
+B => W1.IN1
+HCin => HCin.IN1
+VCin => VCin.IN1
+
+
+|bai1|multiplier:comb_36|Node1:node7|FA1:fa1
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|multiplier:comb_36|Node1:node8
+HCout <= FA1:fa1.port0
+VCout <= FA1:fa1.port1
+A => W1.IN0
+B => W1.IN1
+HCin => HCin.IN1
+VCin => VCin.IN1
+
+
+|bai1|multiplier:comb_36|Node1:node8|FA1:fa1
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|multiplier:comb_36|Node1:node9
+HCout <= FA1:fa1.port0
+VCout <= FA1:fa1.port1
+A => W1.IN0
+B => W1.IN1
+HCin => HCin.IN1
+VCin => VCin.IN1
+
+
+|bai1|multiplier:comb_36|Node1:node9|FA1:fa1
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|multiplier:comb_36|Node1:node10
+HCout <= FA1:fa1.port0
+VCout <= FA1:fa1.port1
+A => W1.IN0
+B => W1.IN1
+HCin => HCin.IN1
+VCin => VCin.IN1
+
+
+|bai1|multiplier:comb_36|Node1:node10|FA1:fa1
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|multiplier:comb_36|Node1:node11
+HCout <= FA1:fa1.port0
+VCout <= FA1:fa1.port1
+A => W1.IN0
+B => W1.IN1
+HCin => HCin.IN1
+VCin => VCin.IN1
+
+
+|bai1|multiplier:comb_36|Node1:node11|FA1:fa1
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|multiplier:comb_36|Node1:node12
+HCout <= FA1:fa1.port0
+VCout <= FA1:fa1.port1
+A => W1.IN0
+B => W1.IN1
+HCin => HCin.IN1
+VCin => VCin.IN1
+
+
+|bai1|multiplier:comb_36|Node1:node12|FA1:fa1
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|multiplier:comb_36|Node1:node13
+HCout <= FA1:fa1.port0
+VCout <= FA1:fa1.port1
+A => W1.IN0
+B => W1.IN1
+HCin => HCin.IN1
+VCin => VCin.IN1
+
+
+|bai1|multiplier:comb_36|Node1:node13|FA1:fa1
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|multiplier:comb_36|Node1:node14
+HCout <= FA1:fa1.port0
+VCout <= FA1:fa1.port1
+A => W1.IN0
+B => W1.IN1
+HCin => HCin.IN1
+VCin => VCin.IN1
+
+
+|bai1|multiplier:comb_36|Node1:node14|FA1:fa1
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|multiplier:comb_36|Node1:node15
+HCout <= FA1:fa1.port0
+VCout <= FA1:fa1.port1
+A => W1.IN0
+B => W1.IN1
+HCin => HCin.IN1
+VCin => VCin.IN1
+
+
+|bai1|multiplier:comb_36|Node1:node15|FA1:fa1
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|FA8:comb_37
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+a[7] => a[7].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+b[4] => b[4].IN1
+b[5] => b[5].IN1
+b[6] => b[6].IN1
+b[7] => b[7].IN1
+cin => cin.IN1
+cout <= FA1:a8.port0
+sum[0] <= FA1:a1.port1
+sum[1] <= FA1:a2.port1
+sum[2] <= FA1:a3.port1
+sum[3] <= FA1:a4.port1
+sum[4] <= FA1:a5.port1
+sum[5] <= FA1:a6.port1
+sum[6] <= FA1:a7.port1
+sum[7] <= FA1:a8.port1
+
+
+|bai1|FA8:comb_37|FA1:a1
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|FA8:comb_37|FA1:a2
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|FA8:comb_37|FA1:a3
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|FA8:comb_37|FA1:a4
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|FA8:comb_37|FA1:a5
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|FA8:comb_37|FA1:a6
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|FA8:comb_37|FA1:a7
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|FA8:comb_37|FA1:a8
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|bai1|hex7seg:digit_3
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[2] => Decoder0.IN1
+hex[3] => Decoder0.IN0
+display[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+display[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+display[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+display[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+display[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+display[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+display[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bai1|hex7seg:digit_2
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[2] => Decoder0.IN1
+hex[3] => Decoder0.IN0
+display[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+display[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+display[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+display[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+display[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+display[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+display[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bai1|hex7seg:digit_1
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[2] => Decoder0.IN1
+hex[3] => Decoder0.IN0
+display[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+display[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+display[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+display[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+display[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+display[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+display[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bai1|hex7seg:digit_0
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[2] => Decoder0.IN1
+hex[3] => Decoder0.IN0
+display[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+display[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+display[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+display[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+display[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+display[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+display[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

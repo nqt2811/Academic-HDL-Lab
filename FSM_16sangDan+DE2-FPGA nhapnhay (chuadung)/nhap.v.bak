@@ -1,0 +1,64 @@
+module nhap (SW,CLOCK_50, LEDR, HEX7, HEX6, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0);
+input [0:0]SW;
+input CLOCK_50;
+output reg [6:0]HEX7, HEX6, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0;
+
+parameter h  = 4'b1010;
+parameter h0  = 4'b1011;
+reg [3:0] cs, ns;
+
+integer p;
+reg clock_2s = 1'b0;
+always @ (posedge CLOCK_50)
+	begin
+		p=p+1;
+		if (p == 2500000)   
+		begin     
+		clock_2s = ~clock_2s;   
+		p = 0;   
+		end   
+	end  
+	
+	always @(*)
+	begin
+	case (cs)
+	h: ns = h0;
+	h0: ns = h;
+	default ns = h;
+	endcase
+	end
+always @ (posedge clock_1s or posedge SW[0])
+	begin 
+		if (SW[0]) cs <= h0;
+		else cs <= ns;
+	
+		end
+	end
+always @ (*) 
+	begin  
+		case (current_state) 
+		h:
+		begin
+			HEX7 = 7'b0100001;
+			HEX6 = 7'b0000110;
+			HEX5 = 7'b0100100;
+			HEX4 = 7'b1000000;
+			HEX3 = 7'b0001110; //F
+			HEX2 = 7'b0001100; //P
+			HEX1 = 7'b0000010; //G
+			HEX0 = 7'b0001000; //A
+		end
+		h0:
+		begin
+			HEX7 = 7'b1111111;
+			HEX6 = 7'b1111111;
+			HEX5 = 7'b1111111;
+			HEX4 = 7'b1111111;
+			HEX3 = 7'b1111111; 
+			HEX2 = 7'b1111111; 
+			HEX1 = 7'b1111111; 
+			HEX0 = 7'b1111111;
+		end
+		default next_state = s;  
+		endcase 
+	end 

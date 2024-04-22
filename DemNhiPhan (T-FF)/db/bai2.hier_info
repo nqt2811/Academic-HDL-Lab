@@ -1,0 +1,38 @@
+|bai2
+SW[0] => SW[0].IN4
+SW[1] => SW[1].IN4
+SW[2] => SW[2].IN1
+LEDR[0] <= t_ff:T1.port0
+LEDR[1] <= t_ff:T2.port0
+LEDR[2] <= t_ff:T3.port0
+LEDR[3] <= t_ff:T4.port0
+
+
+|bai2|t_ff:T1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+t => q~reg0.ENA
+ck => q~reg0.CLK
+rs => q~reg0.ACLR
+
+
+|bai2|t_ff:T2
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+t => q~reg0.ENA
+ck => q~reg0.CLK
+rs => q~reg0.ACLR
+
+
+|bai2|t_ff:T3
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+t => q~reg0.ENA
+ck => q~reg0.CLK
+rs => q~reg0.ACLR
+
+
+|bai2|t_ff:T4
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+t => q~reg0.ENA
+ck => q~reg0.CLK
+rs => q~reg0.ACLR
+
+

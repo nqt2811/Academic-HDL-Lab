@@ -1,0 +1,433 @@
+Analysis & Synthesis report for bai6
+Thu Oct 06 19:39:35 2022
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Oct 06 19:39:35 2022           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; bai6                                            ;
+; Top-level Entity Name              ; bai6                                            ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 70                                              ;
+;     Total combinational functions  ; 70                                              ;
+;     Dedicated logic registers      ; 45                                              ;
+; Total registers                    ; 45                                              ;
+; Total pins                         ; 9                                               ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; bai6               ; bai6               ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                   ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                     ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
+; bai6.v                           ; yes             ; User Verilog HDL File  ; C:/Users/Student/Desktop/hn/06102022/bai6/bai6.v ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
+
+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimated Total logic elements              ; 70       ;
+;                                             ;          ;
+; Total combinational functions               ; 70       ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 29       ;
+;     -- 3 input functions                    ; 1        ;
+;     -- <=2 input functions                  ; 40       ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 39       ;
+;     -- arithmetic mode                      ; 31       ;
+;                                             ;          ;
+; Total registers                             ; 45       ;
+;     -- Dedicated logic registers            ; 45       ;
+;     -- I/O registers                        ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 9        ;
+; Embedded Multiplier 9-bit elements          ; 0        ;
+; Maximum fan-out node                        ; CLOCK_50 ;
+; Maximum fan-out                             ; 33       ;
+; Total fan-out                               ; 304      ;
+; Average fan-out                             ; 2.45     ;
++---------------------------------------------+----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |bai6                      ; 70 (70)           ; 45 (45)      ; 0           ; 0            ; 0       ; 0         ; 9    ; 0            ; |bai6               ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 45    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 8     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 16:1               ; 8 bits    ; 80 LEs        ; 64 LEs               ; 16 LEs                 ; Yes        ; |bai6|HEX6~reg0            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Oct 06 19:39:34 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off bai6 -c bai6
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file bai6.v
+    Info (12023): Found entity 1: bai6
+Info (12127): Elaborating entity "bai6" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at bai6.v(25): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at bai6.v(34): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(35): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(36): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(37): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(38): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(39): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(40): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(41): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(45): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(46): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(47): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(48): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(49): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(50): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(51): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(52): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(56): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(57): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(58): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(59): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(60): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(61): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(62): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(63): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(67): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(68): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(69): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(70): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(71): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(72): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(73): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(74): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(78): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(79): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(80): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(81): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(82): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(83): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(84): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(85): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(89): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(90): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(91): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(92): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(93): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(94): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(95): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(96): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(100): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(101): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(102): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(103): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(104): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(105): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(106): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(107): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(111): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(112): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(113): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(114): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(115): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(116): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(117): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(118): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(122): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(123): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(124): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(125): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(126): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(127): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(128): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(129): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(133): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(134): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(135): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(136): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(137): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(138): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(139): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(140): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(144): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(145): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(146): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(147): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(148): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(149): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(150): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(151): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(155): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(156): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(157): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(158): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(159): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(160): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(161): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(162): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(166): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(167): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(168): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(169): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(170): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(171): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(172): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(173): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(177): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(178): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(179): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(180): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(181): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(182): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(183): truncated value with size 7 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at bai6.v(184): truncated value with size 7 to match size of target (1)
+Warning (12069): Ignored assignment(s) for "HEX0[0]" because "HEX0" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX0[1]" because "HEX0" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX0[2]" because "HEX0" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX0[3]" because "HEX0" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX0[4]" because "HEX0" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX0[5]" because "HEX0" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX0[6]" because "HEX0" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX1[0]" because "HEX1" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX1[1]" because "HEX1" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX1[2]" because "HEX1" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX1[3]" because "HEX1" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX1[4]" because "HEX1" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX1[5]" because "HEX1" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX1[6]" because "HEX1" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX2[0]" because "HEX2" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX2[1]" because "HEX2" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX2[2]" because "HEX2" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX2[3]" because "HEX2" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX2[4]" because "HEX2" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX2[5]" because "HEX2" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX2[6]" because "HEX2" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX3[0]" because "HEX3" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX3[1]" because "HEX3" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX3[2]" because "HEX3" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX3[3]" because "HEX3" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX3[4]" because "HEX3" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX3[5]" because "HEX3" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX3[6]" because "HEX3" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX4[0]" because "HEX4" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX4[1]" because "HEX4" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX4[2]" because "HEX4" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX4[3]" because "HEX4" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX4[4]" because "HEX4" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX4[5]" because "HEX4" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX4[6]" because "HEX4" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX5[0]" because "HEX5" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX5[1]" because "HEX5" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX5[2]" because "HEX5" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX5[3]" because "HEX5" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX5[4]" because "HEX5" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX5[5]" because "HEX5" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX5[6]" because "HEX5" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX6[0]" because "HEX6" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX6[1]" because "HEX6" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX6[2]" because "HEX6" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX6[3]" because "HEX6" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX6[4]" because "HEX6" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX6[5]" because "HEX6" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX6[6]" because "HEX6" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX7[0]" because "HEX7" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX7[1]" because "HEX7" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX7[2]" because "HEX7" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX7[3]" because "HEX7" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX7[4]" because "HEX7" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX7[5]" because "HEX7" is not a bus or array
+Warning (12069): Ignored assignment(s) for "HEX7[6]" because "HEX7" is not a bus or array
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 99 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 8 output pins
+    Info (21061): Implemented 90 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 170 warnings
+    Info: Peak virtual memory: 4623 megabytes
+    Info: Processing ended: Thu Oct 06 19:39:35 2022
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

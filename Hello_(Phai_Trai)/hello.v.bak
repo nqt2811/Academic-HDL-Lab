@@ -1,0 +1,65 @@
+module led7_xoay(SW,HEX0,HEX1,HEX2,HEX3,HEX4); 
+input [17:15]SW; 
+output reg[6:0]HEX0,HEX1,HEX2,HEX3,HEX4; 
+always @ (SW) 
+begin 
+case (SW) 
+3'b000: begin 
+HEX4 =7'b 0001001; //H 
+HEX3 =7'b 0000110; //E 
+HEX2 =7'b 1000111; //L 
+HEX1 =7'b 1000111; //L 
+HEX0 =7'b 1000000; //O 
+end 
+3'b001: begin 
+HEX4 =7'b 0000110; //E 
+HEX3 =7'b 1000111; //L 
+HEX2 =7'b 1000111; //L 
+HEX1 =7'b 1000000; //O 
+HEX0 =7'b 0001001; //H 
+ end 
+3'b010: begin 
+HEX4 =7'b 1000111; //L 
+HEX3 =7'b 1000111; //L 
+HEX2 =7'b 1000000; //O 
+HEX1 =7'b 0001001; //H 
+HEX0 =7'b 0000110; //E 
+end 
+3'b011: begin 
+HEX4 =7'b 1000111; //L 
+HEX3 =7'b 1000000; //O 
+HEX2 =7'b 0001001; //H 
+HEX1 =7'b 0000110; //E 
+HEX0 =7'b 1000111; //L 
+end 
+3'b100: begin 
+HEX4 =7'b 1000000; //O 
+HEX3 =7'b 0001001; //H 
+HEX2 =7'b 0000110; //E 
+HEX1 =7'b 1000111; //L
+HEX0 =7'b 1000111; //L 
+end 
+3'b101: begin 
+HEX4 =7'b 1111111; //tat led 
+HEX3 =7'b 1111111; 
+HEX2 =7'b 1111111; 
+HEX1 =7'b 1111111; 
+HEX0 =7'b 1111111; 
+end 
+3'b110: begin 
+HEX4 =7'b 1111111; //tat led 
+HEX3 =7'b 1111111; 
+HEX2 =7'b 1111111; 
+HEX1 =7'b 1111111; 
+HEX0 =7'b 1111111; 
+end 
+3'b111: begin 
+HEX4 =7'b 1111111; //tat led 
+HEX3 =7'b 1111111; 
+HEX2 =7'b 1111111; 
+HEX1 =7'b 1111111; 
+HEX0 =7'b 1111111; 
+end 
+endcase 
+end 
+endmodule 

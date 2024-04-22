@@ -1,0 +1,148 @@
+|demux1_16
+LEDR[0] <= demux1_8:comb_5.port0
+LEDR[1] <= demux1_8:comb_5.port0
+LEDR[2] <= demux1_8:comb_5.port0
+LEDR[3] <= demux1_8:comb_5.port0
+LEDR[4] <= demux1_8:comb_5.port0
+LEDR[5] <= demux1_8:comb_5.port0
+LEDR[6] <= demux1_8:comb_5.port0
+LEDR[7] <= demux1_8:comb_5.port0
+LEDR[8] <= demux1_8:comb_4.port0
+LEDR[9] <= demux1_8:comb_4.port0
+LEDR[10] <= demux1_8:comb_4.port0
+LEDR[11] <= demux1_8:comb_4.port0
+LEDR[12] <= demux1_8:comb_4.port0
+LEDR[13] <= demux1_8:comb_4.port0
+LEDR[14] <= demux1_8:comb_4.port0
+LEDR[15] <= demux1_8:comb_4.port0
+SW[0] => SW[0].IN2
+SW[1] => SW[1].IN2
+SW[2] => SW[2].IN2
+SW[3] => SW[3].IN1
+SW[4] => SW[4].IN2
+
+
+|demux1_16|demux1_8:comb_4
+out[0] <= demux1_4:u1.port0
+out[1] <= demux1_4:u1.port0
+out[2] <= demux1_4:u1.port0
+out[3] <= demux1_4:u1.port0
+out[4] <= demux1_4:u2.port0
+out[5] <= demux1_4:u2.port0
+out[6] <= demux1_4:u2.port0
+out[7] <= demux1_4:u2.port0
+s[0] => s[0].IN2
+s[1] => s[1].IN2
+s[2] => ~NO_FANOUT~
+E => E.IN1
+D => D.IN2
+
+
+|demux1_16|demux1_8:comb_4|demux1_4:u1
+Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+E => Y.IN1
+E => Y.IN1
+E => Y.IN1
+E => Y.IN1
+S[0] => Y.IN0
+S[0] => Y.IN0
+S[0] => Y.IN0
+S[0] => Y.IN0
+S[1] => Y.IN1
+S[1] => Y.IN1
+S[1] => Y.IN1
+S[1] => Y.IN1
+D => Y.IN1
+D => Y.IN1
+D => Y.IN1
+D => Y.IN1
+
+
+|demux1_16|demux1_8:comb_4|demux1_4:u2
+Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+E => Y.IN1
+E => Y.IN1
+E => Y.IN1
+E => Y.IN1
+S[0] => Y.IN0
+S[0] => Y.IN0
+S[0] => Y.IN0
+S[0] => Y.IN0
+S[1] => Y.IN1
+S[1] => Y.IN1
+S[1] => Y.IN1
+S[1] => Y.IN1
+D => Y.IN1
+D => Y.IN1
+D => Y.IN1
+D => Y.IN1
+
+
+|demux1_16|demux1_8:comb_5
+out[0] <= demux1_4:u1.port0
+out[1] <= demux1_4:u1.port0
+out[2] <= demux1_4:u1.port0
+out[3] <= demux1_4:u1.port0
+out[4] <= demux1_4:u2.port0
+out[5] <= demux1_4:u2.port0
+out[6] <= demux1_4:u2.port0
+out[7] <= demux1_4:u2.port0
+s[0] => s[0].IN2
+s[1] => s[1].IN2
+s[2] => ~NO_FANOUT~
+E => E.IN1
+D => D.IN2
+
+
+|demux1_16|demux1_8:comb_5|demux1_4:u1
+Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+E => Y.IN1
+E => Y.IN1
+E => Y.IN1
+E => Y.IN1
+S[0] => Y.IN0
+S[0] => Y.IN0
+S[0] => Y.IN0
+S[0] => Y.IN0
+S[1] => Y.IN1
+S[1] => Y.IN1
+S[1] => Y.IN1
+S[1] => Y.IN1
+D => Y.IN1
+D => Y.IN1
+D => Y.IN1
+D => Y.IN1
+
+
+|demux1_16|demux1_8:comb_5|demux1_4:u2
+Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+E => Y.IN1
+E => Y.IN1
+E => Y.IN1
+E => Y.IN1
+S[0] => Y.IN0
+S[0] => Y.IN0
+S[0] => Y.IN0
+S[0] => Y.IN0
+S[1] => Y.IN1
+S[1] => Y.IN1
+S[1] => Y.IN1
+S[1] => Y.IN1
+D => Y.IN1
+D => Y.IN1
+D => Y.IN1
+D => Y.IN1
+
+

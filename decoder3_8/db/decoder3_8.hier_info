@@ -1,0 +1,44 @@
+|decoder3_8
+LEDR[0] <= decoder2_4:u1.port0
+LEDR[1] <= decoder2_4:u1.port0
+LEDR[2] <= decoder2_4:u1.port0
+LEDR[3] <= decoder2_4:u1.port0
+LEDR[4] <= decoder2_4:u2.port0
+LEDR[5] <= decoder2_4:u2.port0
+LEDR[6] <= decoder2_4:u2.port0
+LEDR[7] <= decoder2_4:u2.port0
+SW[0] => SW[0].IN2
+SW[1] => SW[1].IN2
+SW[2] => SW[2].IN1
+
+
+|decoder3_8|decoder2_4:u1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+e => y.IN0
+e => y.IN0
+x[0] => y.IN1
+x[0] => y.IN1
+x[0] => y.IN1
+x[0] => y.IN1
+x[1] => y.IN1
+x[1] => y.IN1
+
+
+|decoder3_8|decoder2_4:u2
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+e => y.IN0
+e => y.IN0
+x[0] => y.IN1
+x[0] => y.IN1
+x[0] => y.IN1
+x[0] => y.IN1
+x[1] => y.IN1
+x[1] => y.IN1
+
+
